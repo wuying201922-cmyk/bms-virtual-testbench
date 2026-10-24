@@ -27,12 +27,10 @@ A robust, production-grade Battery Management System (BMS) virtual testbench des
 * 实时监控 32 串单体电压、温度及 SOC 曲线。
 * 系统运行平稳，所有状态指示灯正常。
 
-![Normal State]<img width="1360" height="1111" alt="正常" src="https://github.com/user-attachments/assets/74a8ad34-373d-4f24-87fa-d984f6c89c15" />
-
+![Normal State](https://github.com/user-attachments/assets/74a8ad34-373d-4f24-87fa-d984f6c89c15)
 
 **2. Fault Protection State (故障报警状态)**
 * 模拟触发单体过压/欠压或过流保护时，状态机通过状态字位运算实时捕捉异常。
 * 界面触发保护警告，MOS 状态与保护指示灯实时联动翻转。
 
-![Fault State]<img width="1360" height="1111" alt="异常" src="https://github.com/user-attachments/assets/46dfc2fa-8e90-4af5-bd1d-1cb47f22a6c0" />
-
+![Fault State](https://github.com/user-attachments/assets/46dfc2fa-8e90-4af5-bd1d-1cb47f22a6c0)
