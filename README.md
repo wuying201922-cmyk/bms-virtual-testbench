@@ -13,6 +13,29 @@ A robust, production-grade Battery Management System (BMS) virtual testbench des
 
 ---
 
+## 📄 Protocol Reference
+This project implements data parsing and communication logic compliant with standard industrial specifications. You can review the complete technical details in the repository:
+
+* View Complete Manufacturer CAN Protocol Specification (YDE-BTXXSXX锂电池保护板CAN通讯协议)
+
+---
+
+## 🖥️ System Demonstration
+
+**1. Normal Operation State**
+* Real-time monitoring of 32 series cell voltages, temperatures, and SOC curve dynamics.
+* Stable system telemetry with all status indicators operating in regular green condition.
+
+<img width="1360" height="1111" alt="Image" src="https://github.com/user-attachments/assets/62e2cb60-366d-44ac-bbb0-f22c390a2337" />
+
+**2. Fault Protection State (故障报警状态)**
+* Simulated trigger of cell over-voltage, under-voltage, or over-current protection. The state machine captures exceptions instantly via 16-bit status word bitwise operators.
+* Immediate protection alert dispatch on GUI
+
+![Fault State](https://github.com/user-attachments/assets/46dfc2fa-8e90-4af5-bd1d-1cb47f22a6c0)
+
+---
+
 ## 📂 Project Architecture
 
 ```text
@@ -21,16 +44,8 @@ A robust, production-grade Battery Management System (BMS) virtual testbench des
 ├── bms_protocol.h          # Protocol definitions, data structures, and status word masks
 └── bms_industrial_gui.py   # Python PyQt5 multi-threaded monitoring interface
 
-## 🖥️ System Demonstration
+---
 
-**1. Normal Operation State (正常运行状态)**
-* 实时监控 32 串单体电压、温度及 SOC 曲线。
-* 系统运行平稳，所有状态指示灯正常。
 
-![Normal State](https://github.com/user-attachments/assets/74a8ad34-373d-4f24-87fa-d984f6c89c15)
 
-**2. Fault Protection State (故障报警状态)**
-* 模拟触发单体过压/欠压或过流保护时，状态机通过状态字位运算实时捕捉异常。
-* 界面触发保护警告，MOS 状态与保护指示灯实时联动翻转。
 
-![Fault State](https://github.com/user-attachments/assets/46dfc2fa-8e90-4af5-bd1d-1cb47f22a6c0)
